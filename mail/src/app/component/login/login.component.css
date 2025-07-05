@@ -1,0 +1,71 @@
+/* Full-screen background styling */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form inputs and button */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Error messages */
+  .error-message small {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Link for Sign Up */
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Success/Alert message */
+  .alert-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .alert {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  

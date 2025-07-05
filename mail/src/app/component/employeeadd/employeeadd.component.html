@@ -1,0 +1,23 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  <input formControlName="firstName" placeholder="First Name" required />
+  <input formControlName="middleName" placeholder="Middle Name" />
+  <input formControlName="lastName" placeholder="Last Name" required />
+  
+  <input formControlName="dateOfBirth" type="date" required />
+  
+  <select formControlName="department" aria-placeholder="department">
+    <option>Engineering</option>
+    <option>Support</option>
+    <option>HR</option>
+    <option>Finance</option>
+  </select>
+
+  <input formControlName="salary" type="number" placeholder="Salary" required />
+
+  <textarea formControlName="permanentAddress" placeholder="Permanent Address"></textarea>
+  <textarea formControlName="currentAddress" placeholder="Current Address"></textarea>
+
+  <input type="file" (change)="onFileChange($event)" accept="application/pdf" required />
+  
+  <button type="submit">Add Employee</button>
+</form>

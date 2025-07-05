@@ -1,0 +1,39 @@
+
+<div class="page-container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="login-container">
+        <form [formGroup]="registerForm1" (ngSubmit)="onSubmit()">
+          <h2 class="text-center">Login</h2>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" type="text" class="form-control" />
+            <div *ngIf="registerForm1.get('email')?.invalid && registerForm1.get('email')?.touched" class="error-message">
+              <small>Email is required.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input id="password" formControlName="password" type="password" class="form-control" />
+            <div *ngIf="registerForm1.get('password')?.invalid && registerForm1.get('password')?.touched" class="error-message">
+              <small>Password is required.</small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+  
+        <div class="signup-link text-center mt-3">
+          <p>Don't have an account? <a routerLink="/register">signup</a></p>
+        </div>
+      </div>
+  
+      <div class="alert-container">
+        <div *ngIf="showSuccessAlert1" class="alert alert-success text-center" role="alert">
+          {{ alert1 }}
+        </div>
+        <div *ngIf="showSuccessAlert2" class="alert alert-danger text-center" role="alert">
+          {{ alert2 }}
+        </div>
+      </div>
+    </div>
+  </div>
+  

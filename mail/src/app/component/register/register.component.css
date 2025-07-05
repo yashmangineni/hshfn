@@ -1,0 +1,122 @@
+/* Page container */
+.page-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  /* Center the content using flexbox */
+  .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form container styling */
+  .container {
+    width: 100%;
+    max-width: 500px; /* Max width for better form size */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Light background for the form */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+  }
+  
+  /* Form title */
+  .form-title {
+    color: #dc3545; /* Red color */
+    font-size: 24px;
+    text-align: center; /* Center the form title */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Input field styling */
+  .form-control {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #dc3545; /* Red border when focused */
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Button styling */
+  .btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Sign-up link styling */
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  .success-popup {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: #fff;
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-in-out;
+    z-index: 1000;
+  }
+  
+  @keyframes slideIn {
+    from {
+      right: -150px;
+      opacity: 0;
+    }
+    to {
+      right: 30px;
+      opacity: 1;
+    }
+  }
+  

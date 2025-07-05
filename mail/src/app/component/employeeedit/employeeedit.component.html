@@ -1,0 +1,54 @@
+<div class="edit-container">
+  <h2>Edit Employee</h2>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="onUpdate()">
+    <label>First Name:</label>
+    <input formControlName="firstName" type="text" required />
+    <div *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched" class="error">
+      First Name is required.
+    </div>
+
+    <label>Middle Name:</label>
+    <input formControlName="middleName" type="text" />
+
+    <label>Last Name:</label>
+    <input formControlName="lastName" type="text" required />
+    <div *ngIf="employeeForm.get('lastName')?.invalid && employeeForm.get('lastName')?.touched" class="error">
+      Last Name is required.
+    </div>
+
+    <label>Date of Birth:</label>
+    <input formControlName="dateOfBirth" type="date" required />
+    <div *ngIf="employeeForm.get('dateOfBirth')?.invalid && employeeForm.get('dateOfBirth')?.touched" class="error">
+      Date of Birth is required.
+    </div>
+
+    <label>Department:</label>
+    <select formControlName="department" required>
+      <option value="">--Select Department--</option>
+      <option>Engineering</option>
+      <option>Support</option>
+      <option>HR</option>
+      <option>Finance</option>
+    </select>
+    <div *ngIf="employeeForm.get('department')?.invalid && employeeForm.get('department')?.touched" class="error">
+      Department is required.
+    </div>
+
+    <label>Salary:</label>
+    <input formControlName="salary" type="number" min="0" required />
+    <div *ngIf="employeeForm.get('salary')?.invalid && employeeForm.get('salary')?.touched" class="error">
+      Salary must be a positive number.
+    </div>
+
+    <label>Permanent Address:</label>
+    <textarea formControlName="permanentAddress"></textarea>
+
+    <label>Current Address:</label>
+    <textarea formControlName="currentAddress"></textarea>
+
+    <!-- Add upload file field if needed -->
+
+    <button type="submit" [disabled]="employeeForm.invalid">Update Employee</button>
+  </form>
+</div>

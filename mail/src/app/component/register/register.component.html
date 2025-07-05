@@ -1,0 +1,47 @@
+<div class="page-container">
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="container">
+    <div class="signup">
+      <form *ngIf="formVisible" [formGroup]="registration" (ngSubmit)="data()" class="form-content">
+        <h3 class="text-center text-danger">Account Registration</h3>
+        
+        <!-- Email Input -->
+        <div class="form-control-lg">
+          <input type="text" class="form-control" formControlName="email" placeholder="Enter your email">
+          <small *ngIf="registration.get('email').invalid && registration.get('email').touched" class="text-danger">
+           Enter a valid email (e.g., mail@gmail.com).
+          </small>
+        </div>
+        
+        <!-- Password Input -->
+        <div class="form-control-lg">
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter a password">
+          <small *ngIf="registration.get('password').invalid && registration.get('password').touched" class="text-danger">
+           Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one number, and one special character.
+          </small>
+        </div>
+
+        <!-- Validation Error Message -->
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+
+        <!-- Success Message -->
+        <div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+        </div>
+
+
+        <!-- Signup button -->
+        <button type="submit" class="btn btn-danger w-100">Submit</button>
+      </form>
+
+      <!-- Signup link -->
+      <div class="signup-link text-center mt-3">
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
